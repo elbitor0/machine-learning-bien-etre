@@ -1,1 +1,4 @@
-bienetre.xlsx
+*.xlsx
+Lib
+machine-learning-bienetre
+*.cfg
