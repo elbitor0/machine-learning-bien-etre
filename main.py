@@ -17,7 +17,7 @@ def normalize(X):
 def evaluate(X_normalized, Y, k=5, n_neighbors =5 ,n_splits=10):
     cross_validation_object = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=42)
     knn_object = KNeighborsClassifier(n_neighbors=n_neighbors)
-    scores = cross_val_score(knn_object, X_normalized, Y,cv=cross_validation_object,scoring="f1-weighted")
+    scores = cross_val_score(knn_object, X_normalized, Y,cv=cross_validation_object,scoring="f1_weighted")
     print(f"f1-score moyen {scores.mean()} +/- {scores.std()}")
 
 if __name__ == "__main__":
